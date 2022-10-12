@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char ch[10][130]={"Cardiff Express","Belfast Express","Derby Express","Chester Express","Newport Express","Truro Express"};
+char ch[10][130]={"Parveen Travels","Chartered Bus","Raj Express","Morning Star Travels","Orange Travels","IntrCity Smartbus"};
 char name[32][100]={'\0'};
 char number[32][2]={'\0'};
 int num1[32]={0};
@@ -340,49 +340,49 @@ printf("-------------------------------------- BUS BOOKING SYSTEM --------------
 
 void cancel()
 {
- int seat_no,i,j;
- char numstr[100],tempstr2[15]="number",tempstr1[15]="status";
+    int seat_no,i,j;
+    char numstr[100],tempstr2[15]="number",tempstr1[15]="status";
 
- printf("Enter the bus number : : ");
- scanf("%d",&trno);
- itoa(trno,numstr,10);
- strcat(numstr,".txt");
- strcat(tempstr1,numstr);
- strcat(tempstr2,numstr);
- read_number(trno);
- read_name(trno);
- status_1(trno);
- printf("Enter the seat number : : ");
- scanf("%d",&seat_no);
+    printf("Enter the bus number : : ");
+    scanf("%d",&trno);
+    itoa(trno,numstr,10);
+    strcat(numstr,".txt");
+    strcat(tempstr1,numstr);
+    strcat(tempstr2,numstr);
+    read_number(trno);
+    read_name(trno);
+    status_1(trno);
+    printf("Enter the seat number : : ");
+    scanf("%d",&seat_no);
 
- FILE *a,*b;
- a = fopen(tempstr1,"w+");
- b = fopen(tempstr2,"w+");
- 
- for(i=0; i<32; i++)
- {
-     if(num1[i] == seat_no)
-     {
-         for(j=0; j<32; j++)
-         {
-             if(num1[j] != seat_no && num1[j] != 0)
-             {
-                 fprintf(b,"%d ",num1[j]);
-                 fprintf(a,"%s",name[j]);
-             }
-             else if(num1[j] == seat_no && num1[j] != 0)
-             {
-                 strcpy(name[j],"Empty ");
-             }
-         }
-     }
- }
-fclose(a);
-fclose(b);
-printf("\n\n");
-    printf("======================================================================================================\n");
- printf("\t\t\t\tYour 200 rupees has been Returned\t\t\t\n");
-    printf("======================================================================================================\n");
+    FILE *a,*b;
+    a = fopen(tempstr1,"w+");
+    b = fopen(tempstr2,"w+");
+
+    for(i=0; i<32; i++)
+    {
+        if(num1[i] == seat_no)
+        {
+            for(j=0; j<32; j++)
+            {
+                if(num1[j] != seat_no && num1[j] != 0)
+                {
+                    fprintf(b,"%d ",num1[j]);
+                    fprintf(a,"%s",name[j]);
+                }
+                else if(num1[j] == seat_no && num1[j] != 0)
+                {
+                    strcpy(name[j],"Empty ");
+                }
+            }
+        }
+    }
+    fclose(a);
+    fclose(b);
+    printf("\n\n");
+        printf("------------------------------------------------------------------------------------------------------------------\n");
+    printf("\t\t\t\t Your 200 rupees has been refunded successfully. \t\t\t\n");
+        printf("------------------------------------------------------------------------------------------------------------------\n");
 }
 
 
@@ -392,15 +392,15 @@ void login()
     char uname[10],c=' '; 
     char pword[10],code[10];
     char user[10]="user";
-    char pass[10]="pass";
+    char pwd[10]="pass";
     do
 {
 	system("cls");
 	
-    printf("\n  =========================  LOGIN FORM  =========================  ");
-    printf(" \n                       ENTER USERNAME:-");
+    printf("\n  --------------------------------------  LOGIN FORM  --------------------------------------  ");
+    printf(" \n                       ENTER USERNAME : : ");
 	scanf("%s", &uname); 
-	printf(" \n                       ENTER PASSWORD:-");
+	printf(" \n                       ENTER PASSWORD : : ");
 	while(i<10)
 	{
 	    pword[i]=getch();
@@ -415,14 +415,14 @@ void login()
 	//scanf("%s",&pword); 
 		if(strcmp(uname,"user")==0 && strcmp(pword,"pass")==0)
 	{
-	printf("  \n\n\n       WELCOME TO OUR SYSTEM !!!! LOGIN IS SUCCESSFUL");
-	printf("\n\n\n\t\t\t\tPress any key to continue...");
+	printf("\n\n\n\t\t\tWELCOME TO OUR SYSTEM.  LOGIN SUCCESSFUL.");
+	printf("\n\n\n\t\t\t\t Press any key to continue...");
 	getch();//holds the screen
 	break;
 	}
 	else
 	{
-		printf("\n        SORRY !!!!  LOGIN IS UNSUCESSFUL");
+		printf("\n\t\t\tERROR...  LOGIN UNSUCESSFUL.");
 		a++;
 		
 		getch();//holds the screen
@@ -430,9 +430,9 @@ void login()
 	}
 }
 	while(a<=2);
-	if (a>2)
+	if(a>2)
 	{
-		printf("\nSorry you have entered the wrong username and password for four times!!!");
+		printf("\nYou entered the wrong username and password four times.");
 		
 		getch();
 		

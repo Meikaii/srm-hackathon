@@ -87,12 +87,13 @@ void booking()
     char numstr[100];
 
     system("cls");
-    printf("-------------------------------------- BUS BOOKING SYSTEM --------------------------------------\n\n\n");//for entering train number
+    printf("-------------------------------------- BUS BOOKING SYSTEM --------------------------------------\n\n\n");
     bus();
+    printf("\n\n\n-------------------------------------- BOOKING PRICE ====> 200 RUPEES -------------------------------------- \n\n\n");
     printf("Enter the Bus number : : ");
     scanf("%d",&trno);
     system("cls");
-    printf("-------------------------------------- BUS BOOKING SYSTEM --------------------------------------\n\n\n");//for selecting coach
+    printf("-------------------------------------- BUS BOOKING SYSTEM --------------------------------------\n\n\n");
     printf("Your Bus Number is %d ********** %s",trno,ch[trno-1]);
     status_1(trno);
 

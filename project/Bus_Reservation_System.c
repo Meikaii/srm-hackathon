@@ -390,10 +390,10 @@ void cancel()
 void login()
 {
 	int a=0, i=0;
-    char uname[10],c=' '; 
-    char pword[10],code[10];
-    char user[10]="user";
-    char pwd[10]="pass";
+    char uname[10], c=' '; 
+    char pword[10], code[10];
+    char user[10] = "user";
+    char pwd[10] = "pass";
     do
 {
 	system("cls");
@@ -416,7 +416,7 @@ void login()
 	// scanf("%s",&pword); 
 		if(strcmp(uname,"user")==0 && strcmp(pword,"pass")==0)
 	{
-	printf("\n\n\n\t\t\tWELCOME TO OUR SYSTEM.  LOGIN SUCCESSFUL.");
+	printf("\n\n\n\t\t\t WELCOME TO OUR SYSTEM.  LOGIN SUCCESSFUL.");
 	printf("\n\n\n\t\t\t\t Press any key to continue...");
 	getch();
 	break;
@@ -434,8 +434,8 @@ void login()
 	if(a>2)
 	{
 		printf("\nYou entered the wrong username and password four times.");
-		
 		getch();
+        exit(1);
 		
 		}
 		system("cls");	

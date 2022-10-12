@@ -389,7 +389,7 @@ void cancel()
 
 void login()
 {
-	int a=0,i=0;
+	int a=0, i=0;
     char uname[10],c=' '; 
     char pword[10],code[10];
     char user[10]="user";

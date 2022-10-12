@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char ch[10][130]={"Parveen Travels","Chartered Bus","Raj Express","Morning Star Travels","Orange Travels","IntrCity Smartbus"};
+char ch[10][130]={"Parveen Travels","Chartered Bus","Raj Express","Morning Star Travels","Orange Travels"};
 char name[32][100]={'\0'};
 char number[32][2]={'\0'};
 int num1[32]={0};
